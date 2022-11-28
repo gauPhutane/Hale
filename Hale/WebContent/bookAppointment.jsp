@@ -7,7 +7,6 @@
 <title>Insert title here</title>
  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 <a href="index.jsp" class="H2">Go To Main Page</a>
  <div align="center">
@@ -48,6 +47,11 @@
     <b>Doctor</b>
     	<select id ="doctor" name="doctor">
   		<option value="0">Please select</option>
+  		<option value="Dr. Martin Wasser">Dr. Martin Wasser</option>
+ 		<option value="Dr. Carl Tiedemann">Dr. Carl Tiedemann</option>
+  		<option value="Dr. Brady Stofer">Dr. Brady Stofer</option>
+  		<option value="Dr. May Scheiner">Dr. May Scheiner</option>
+  		<option value="Dr. Sofia Hansell">Dr. Sofia Hansell</option>
   		<option id="MartinWasser" value="Dr. Martin Wasser">Dr. Martin Wasser</option>
  		<option id="CarlTiedemann" value="Dr. Carl Tiedemann">Dr. Carl Tiedemann</option>
   		<option id="BradyStofer" value="Dr. Brady Stofer">Dr. Brady Stofer</option>
@@ -55,8 +59,7 @@
   		<option id="SofiaHansell" value="Dr. Sofia Hansell">Dr. Sofia Hansell</option>
 	</select>
     </label>
-    
-    <br /><br />
+   <br /><br />
      
      <label>
      <b>Date</b>
@@ -91,11 +94,15 @@
   </form> 
  </div>
 </body>
+
+  </form> 
+ </div>
+</body>
 <script>
 var url = new URL(window.location.href);
 var currentDoctor = url.searchParams.get("currentDoctor");
 console.log(currentDoctor);
-
+</html>
 (function() {
   	if (currentDoctor == "MartinWasser") {
   		document.getElementById('MartinWasser').selected = true;
