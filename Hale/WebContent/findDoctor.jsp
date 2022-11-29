@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +22,17 @@
   		<br/>
   		<label id="DoctorsLabel" for="Doctors" style="display: none;">Doctors Nearby:</label>
   		<select style="display: none;" id="StillwaterDoctors">
-  			<option value="null">Select a doctor..</option>
+  			<option id="StillwaterNull" value="null">Select a doctor..</option>
   			<option id="MartinWasserOption" value="Martin Wasser">Dr. Martin Wasser</option>
   			<option id="CarlTiedemannOption" value="Carl Tiedemann">Dr. Carl Tiedemann</option>
   		</select>
   		<select style="display: none;" id="OKCDoctors">
-  			<option value="null">Select a doctor..</option>
+  			<option id="OKCNull" value="null">Select a doctor..</option>
   			<option id="BradyStoferOption" value="Brady Stofer">Dr. Brady Stofer</option>
   			<option id="MayScheinerOption" value="May Scheiner">Dr. May Scheiner</option>
   		</select>
   		<select style="display: none;" id="TulsaDoctors">
-  			<option value="null">Select a doctor..</option>
+  			<option id="TulsaNull" value="null">Select a doctor..</option>
   			<option id="SofiaHansellOption" value="Sofia Hansell">Dr. Sofia Hansell</option>
   		</select>
   		<br/>
@@ -47,18 +45,21 @@
 		if (this.value == 'Stillwater') {
 			document.getElementById('DoctorsLabel').style.display = "inline-block";
 			document.getElementById('StillwaterDoctors').style.display = "inline-block";
+			document.getElementById('StillwaterNull').selected = true;
 			document.getElementById('OKCDoctors').style.display = "none";
 			document.getElementById('TulsaDoctors').style.display = "none";
 			document.getElementById('BookAppointment').style.display = "none";
 		} else if (this.value == 'OKC') {
 			document.getElementById('DoctorsLabel').style.display = "inline-block";
 			document.getElementById('OKCDoctors').style.display = "inline-block";
+			document.getElementById('OKCNull').selected = true;
 			document.getElementById('StillwaterDoctors').style.display = "none";
 			document.getElementById('TulsaDoctors').style.display = "none";
 			document.getElementById('BookAppointment').style.display = "none";
 		} else if (this.value == 'Tulsa') {
 			document.getElementById('DoctorsLabel').style.display = "inline-block";
 			document.getElementById('TulsaDoctors').style.display = "inline-block";
+			document.getElementById('TulsaNull').selected = true;
 			document.getElementById('StillwaterDoctors').style.display = "none";
 			document.getElementById('OKCDoctors').style.display = "none";
 			document.getElementById('BookAppointment').style.display = "none";
@@ -68,6 +69,9 @@
 			document.getElementById('StillwaterDoctors').style.display = "none";
 			document.getElementById('OKCDoctors').style.display = "none";
 			document.getElementById('BookAppointment').style.display = "none";
+			document.getElementById('StillwaterNull').selected = true;
+			document.getElementById('TulsaNull').selected = true;
+			document.getElementById('OKCNull').selected = true;
 		}
 	});
 	
