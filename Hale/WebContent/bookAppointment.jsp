@@ -102,8 +102,6 @@
 <script>
 var url = new URL(window.location.href);
 var currentDoctor = url.searchParams.get("currentDoctor");
-console.log(currentDoctor);
-</html>
 (function() {
   	if (currentDoctor == "MartinWasser") {
   		document.getElementById('MartinWasser').selected = true;
